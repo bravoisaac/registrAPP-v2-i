@@ -1,0 +1,21 @@
+<app-header titulo="Scan"></app-header>
+
+<ion-content class="ion-text-center">
+  <ion-grid fixed>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>estudiante {{nombre}}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-img src="/assets/icon/cursos/qr.png"></ion-img>
+      <ion-card-content>
+        Escanea el código QR para dejar instancia de tu asistencia 
+      </ion-card-content>
+      <ion-button color="duocy" block  (click)="cathDate()" >QR Random</ion-button>
+      <ion-button color="duocy" block  (click)="cathQR()">QR Local </ion-button>
+    </ion-card>
+    <ion-row>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>
