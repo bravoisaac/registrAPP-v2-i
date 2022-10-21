@@ -11,12 +11,13 @@ interface histo {
 
 }
 
+
 @Component({
-  selector: 'app-generar-qr',
-  templateUrl: './generar-qr.page.html',
-  styleUrls: ['./generar-qr.page.scss'],
+  selector: 'app-generar-qr3',
+  templateUrl: './generar-qr3.page.html',
+  styleUrls: ['./generar-qr3.page.scss'],
 })
-export class GenerarQrPage implements OnInit {
+export class GenerarQr3Page implements OnInit {
 
 
   historial:histo ={
@@ -26,7 +27,6 @@ export class GenerarQrPage implements OnInit {
     hora:'',
 
   };
-  componentess: histo []=[]
 
   componentes: histo []=[
     {

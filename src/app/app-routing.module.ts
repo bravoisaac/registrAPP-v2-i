@@ -41,6 +41,7 @@ const routes: Routes = [
     path: 'seccion',
     loadChildren: () => import('./pages/seccion/seccion.module').then( m => m.SeccionPageModule)
   },
+  
   {
     path: 'asignatura',
     loadChildren: () => import('./pages/asignatura/asignatura.module').then( m => m.AsignaturaPageModule)
@@ -52,6 +53,22 @@ const routes: Routes = [
   {
     path: 'reg',
     loadChildren: () => import('./pages/registration/reg/reg.module').then( m => m.RegPageModule)
+  },
+  {
+    path: 'seccion2',
+    loadChildren: () => import('./pages/seccion2/seccion2.module').then( m => m.Seccion2PageModule)
+  },
+  {
+    path: 'seccion3',
+    loadChildren: () => import('./pages/seccion3/seccion3.module').then( m => m.Seccion3PageModule)
+  },
+  {
+    path: 'generar-qr2',
+    loadChildren: () => import('./pages/QR/generar-qr2/generar-qr2.module').then( m => m.GenerarQr2PageModule)
+  },
+  {
+    path: 'generar-qr3',
+    loadChildren: () => import('./pages/QR/generar-qr3/generar-qr3.module').then( m => m.GenerarQr3PageModule)
   },
 ];
 

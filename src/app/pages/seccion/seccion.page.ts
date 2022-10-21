@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationExtras, Router } from '@angular/router';
 import { Storage } from '@ionic/storage-angular';
 
 interface seccion {
@@ -24,7 +25,7 @@ export class SeccionPage implements OnInit {
     {
     icon: 'assets/icon/cursos/oja.svg',
     name: 'DBJ-D2',
-    redirectTo: '/generar-qr'
+    redirectTo: '/generar-qr2'
     },
     {
     icon: 'assets/icon/cursos/oja.svg',
@@ -39,12 +40,18 @@ export class SeccionPage implements OnInit {
 
   ]
 
-  constructor(private storage:Storage) { }
+  constructor(private storage:Storage,private router:Router) { }
 
   ngOnInit() {
   }
-  sendSeccion(seccion){
-    this.storage.set('seccion', seccion+'')
+  sendCurso(name:string){
+    let navExtras:NavigationExtras={
+      state:{
+        curso: name
+      }
+    }
+    this.router.navigate(['/generar-qr'], navExtras)
+    this.storage.set('seccion', name+'')
   }
   
 
